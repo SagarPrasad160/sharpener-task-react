@@ -5,7 +5,7 @@ function OrderInput({ addOrder }) {
 
   const [price, setPrice] = useState(0 || "");
 
-  const [select, setSelect] = useState("table1");
+  const [select, setSelect] = useState("Table1");
 
   const handleTextChange = (e) => {
     setText(e.target.value);
@@ -29,7 +29,7 @@ function OrderInput({ addOrder }) {
     addOrder(order);
     setText("");
     setPrice("");
-    setSelect("table1");
+    setSelect("Table1");
   };
 
   return (

@@ -13,8 +13,6 @@ function App() {
     setOrders(prev);
   }, []);
 
-  console.log(orders);
-
   const addOrder = (order) => {
     const { name, price, table } = order;
     const orderwithId = {
@@ -23,7 +21,6 @@ function App() {
       table,
       id: uuidv4(),
     };
-    console.log(orderwithId);
     setOrders([...orders, orderwithId]);
     localStorage.setItem("orders", JSON.stringify([...orders, orderwithId]));
   };
